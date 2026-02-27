@@ -3,96 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FurBlood - Kişisel Sayfa</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        header {
-            background: #2c3e50;
-            color: #ffffff;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin: 0;
-            font-size: 1.2em;
-            color: #bdc3c7;
-        }
-        .container {
-            background: #ffffff;
-            padding: 30px;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 10px;
-        }
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #7f8c8d;
-        }
-    </style>
+    <title>Furkan Çevik — Ana Sayfa</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
     <header>
-        <h1>FurBlood</h1>
-        <p>Bilgisayar Mühendisliği Öğrencisi | Marmara Üniversitesi</p>
+        <h1>Furkan Çevik</h1>
+        <p><em>Kod yazar, sistem kurar, donanım optimize eder.</em></p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="interests.html">İlgi Alanlarım</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        <h2>Hakkımda</h2>
-        <p>Merhaba! GitHub Pages sayfama hoş geldiniz. Bilgisayar Mühendisliği alanında eğitim alıyor, yazılım geliştirme ve sistem mimarileri üzerine çalışmalar yapıyorum.</p>
+    <main>
+        <section>
+            <h2>Hoş Geldiniz</h2>
+            <p>
+                Merhaba, ben Furkan Çevik. Marmara Üniversitesi Bilgisayar Mühendisliği bölümünde öğrenciyim.
+                Yazılım geliştirme ve sistem yönetimi dünyasına tutkuyla bağlıyım. Bir yandan üniversitede
+                aldığım derslerle teorik altyapımı güçlendirirken, diğer yandan kişisel projelerimle
+                pratik deneyim kazanıyorum. Linux tabanlı sistemlerde çalışmayı, veritabanı mimarileri
+                tasarlamayı ve donanım seviyesinde optimizasyonlar yapmayı seviyorum. Bu site, hem kendimi
+                tanıtmak hem de öğrenme yolculuğumu paylaşmak için oluşturduğum kişisel portfolyömdür.
+            </p>
+        </section>
 
-        <h2>Teknoloji ve İlgi Alanları</h2>
-        <ul>
-            <li><strong>Geliştirme Ortamı:</strong> Arch Linux (KDE Plasma), macOS, Ghostty</li>
-            <li><strong>Programlama:</strong> Python (SQLAlchemy vb.), C/C++</li>
-            <li><strong>Veritabanı Yönetimi:</strong> PostgreSQL, MSSQL</li>
-            <li><strong>Donanım & Gömülü Sistemler:</strong> ESP32, PIC16F877A</li>
-            <li><strong>Makine Öğrenmesi:</strong> Ağ anomalisi tespiti (1D-CNN)</li>
-        </ul>
+        <section>
+            <h2>Hızlı Bilgiler</h2>
+            <ul>
+                <li>İstanbul, Türkiye'de yaşıyorum.</li>
+                <li>Marmara Üniversitesi Bilgisayar Mühendisliği öğrencisiyim.</li>
+                <li>Laptop donanım optimizasyonları (SSD yükseltmeleri, termal iyileştirmeler) ile ilgileniyorum.</li>
+                <li>Linux mimarisine, özellikle Arch Linux ekosistemine büyük ilgi duyuyorum.</li>
+                <li>Python, SQL ve gömülü sistemler üzerine aktif olarak çalışıyorum.</li>
+            </ul>
+        </section>
 
-        <h2>Bağlantılar</h2>
-        <p>Kodlarımı ve açık kaynak projelerimi incelemek için <a href="https://github.com/FurBlood" target="_blank">GitHub profilimi</a> ziyaret edebilirsiniz.</p>
-    </div>
+        <section id="hedefler">
+            <h2>Öğrenme Hedeflerim</h2>
+            <p>Aşağıda, önümüzdeki dönemde odaklanmayı planladığım hedeflerimi sıralıyorum:</p>
+            <ol>
+                <li>Arch Linux yapılandırmalarımı ileri seviyeye taşımak; Hyprland pencere yöneticisi üzerinde verimli bir masaüstü ortamı kurmak.</li>
+                <li>Python bilgimi derinleştirmek, özellikle veri işleme kütüphaneleri ve otomasyon betikleri konusunda uzmanlaşmak.</li>
+                <li>SQL ve PostgreSQL bilgimi pekiştirerek karmaşık sorgu optimizasyonları yapabilecek seviyeye ulaşmak.</li>
+                <li>Yapay Zeka ve Makine Öğrenmesi alanında CNN ve LSTM gibi sinir ağı mimarileriyle kişisel projeler üretmek.</li>
+                <li>Açık kaynak topluluklarına katkıda bulunarak gerçek dünya projelerinde deneyim kazanmak.</li>
+            </ol>
+            <p><a href="#hedefler">↑ Hedefler bölümüne dön</a></p>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 FurBlood. GitHub Pages ile oluşturulmuştur.</p>
+        <p>&copy; 2026 Furkan Çevik. Tüm hakları saklıdır.</p>
     </footer>
 
+    <script src="scripts/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,235 @@
+/* ===== GENEL SIFIRLAMA & TEMEL AYARLAR ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+    color: #e0e0e0;
+    background-color: #0f0f0f;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== BAĞLANTILAR ===== */
+a {
+    color: #64b5f6;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+a:hover,
+a:focus {
+    color: #90caf9;
+    text-decoration: underline;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #1a1a2e;
+    border-bottom: 3px solid #0f3460;
+    padding: 2rem 1.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    color: #e94560;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+header > p {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 1.2rem;
+}
+
+/* ===== NAVİGASYON ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    color: #e0e0e0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #e94560;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ===== ANA İÇERİK ===== */
+main {
+    max-width: 860px;
+    width: 100%;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+}
+
+/* ===== BÖLÜMLER ===== */
+section,
+article {
+    margin-bottom: 2.5rem;
+}
+
+/* ===== BAŞLIKLAR ===== */
+h2 {
+    font-size: 1.6rem;
+    color: #e94560;
+    border-left: 4px solid #e94560;
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #64b5f6;
+    margin-bottom: 0.6rem;
+}
+
+/* ===== PARAGRAFLAR ===== */
+p {
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+/* ===== LİSTELER (ul / ol) ===== */
+ul,
+ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ul li,
+ol li {
+    margin-bottom: 0.45rem;
+    color: #ccc;
+}
+
+ul li::marker {
+    color: #e94560;
+}
+
+ol li::marker {
+    color: #64b5f6;
+    font-weight: 700;
+}
+
+/* ===== TANIM LİSTESİ (dl) ===== */
+dl {
+    margin-bottom: 1.5rem;
+}
+
+dt {
+    font-size: 1.1rem;
+    color: #e94560;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+dd {
+    margin-left: 1.2rem;
+    color: #bbb;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+/* ===== VURGULAR ===== */
+strong {
+    color: #fff;
+}
+
+em {
+    color: #90caf9;
+    font-style: italic;
+}
+
+/* ===== ALINTI (blockquote) ===== */
+blockquote {
+    border-left: 4px solid #e94560;
+    background-color: #1a1a2e;
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+blockquote p {
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 0.4rem;
+}
+
+blockquote p:last-child {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #1a1a2e;
+    border-top: 3px solid #0f3460;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 0;
+}
+
+/* ===== DUYARLI TASARIM (Responsive) ===== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    nav ul li a {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 0 1rem;
+        margin: 1.5rem auto;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
