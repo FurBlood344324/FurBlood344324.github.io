@@ -1,8 +1,5 @@
-// ===== Furkan Çevik Portfolyo — Ana Script Dosyası =====
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ---- 1. Aktif Sayfa Navigasyon Vurgulama ----
     const navLinks = document.querySelectorAll("nav ul li a");
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
@@ -13,13 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // ---- 2. Scroll-to-Top Butonu ----
     const scrollBtn = document.createElement("button");
     scrollBtn.textContent = "↑";
     scrollBtn.setAttribute("aria-label", "Sayfanın başına dön");
     scrollBtn.id = "scrollTopBtn";
 
-    // Buton stilleri (inline — harici CSS'e bağımlı değil)
     Object.assign(scrollBtn.style, {
         position: "fixed",
         bottom: "2rem",
@@ -58,10 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    // ---- 3. Bölümlere Giriş Animasyonu (Fade-In) ----
     const sections = document.querySelectorAll("main section, main article");
 
-    // Başlangıçta gizle
     sections.forEach((sec) => {
         sec.style.opacity = "0";
         sec.style.transform = "translateY(20px)";
@@ -86,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach((sec) => fadeInObserver.observe(sec));
 
-    // ---- 4. Footer Yılı Otomatik Güncelleme ----
     const footerP = document.querySelector("footer p");
     if (footerP) {
         const year = new Date().getFullYear();
