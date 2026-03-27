@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Lab</title>
+    <link rel="stylesheet" href="styles/flexbox-lab.css">
+</head>
+<body>
+    <div class="fxlab-page">
+        <nav class="fxlab-navbar" aria-label="Flexbox Lab Navigasyonu">
+            <div class="fxlab-logo">LOGO</div>
+            <div class="fxlab-nav-links">
+                <a href="#">Ana Sayfa</a>
+                <a href="#">Hakkında</a>
+                <a href="#">Dersler</a>
+                <a href="#">İletişim</a>
+            </div>
+        </nav>
+
+        <section class="fxlab-hero">
+            <div class="fxlab-panel fxlab-hero-copy">
+                <div>
+                    <div class="fxlab-chip-row">
+                        <span class="fxlab-chip">flex layout</span>
+                        <span class="fxlab-chip">justify-content</span>
+                        <span class="fxlab-chip">10vh / 30vh / 20vh</span>
+                    </div>
+                    <h1>Hero Baslik</h1>
+                    <p>Aciklama metni ile desteklenen, yalnizca HTML ve CSS kullanan modern bir flexbox yerlesimi.</p>
+                    <div class="fxlab-lines" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <a class="fxlab-button" href="#">Buton</a>
+            </div>
+
+            <div class="fxlab-panel fxlab-hero-visual" aria-label="Ornek gorsel alani">
+                <div class="fxlab-visual-box">
+                    <div class="fxlab-mountain fxlab-mountain-left"></div>
+                    <div class="fxlab-mountain fxlab-mountain-right"></div>
+                    <div class="fxlab-sun"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fxlab-panel fxlab-cards-section">
+            <div class="fxlab-section-head">
+                <h2>Kartlar Bolumu</h2>
+                <div class="fxlab-chip-row">
+                    <span class="fxlab-chip">multiple items</span>
+                    <span class="fxlab-chip">flex-wrap</span>
+                    <span class="fxlab-chip">gap</span>
+                </div>
+            </div>
+
+            <div class="fxlab-cards-grid">
+                <article class="fxlab-card">
+                    <h3>Kart Basligi</h3>
+                    <p>Kisa aciklama</p>
+                    <a class="fxlab-button fxlab-button-small" href="#">Buton</a>
+                </article>
+                <article class="fxlab-card">
+                    <h3>Kart Basligi</h3>
+                    <p>Kisa aciklama</p>
+                    <a class="fxlab-button fxlab-button-small" href="#">Buton</a>
+                </article>
+                <article class="fxlab-card">
+                    <h3>Kart Basligi</h3>
+                    <p>Kisa aciklama</p>
+                    <a class="fxlab-button fxlab-button-small" href="#">Buton</a>
+                </article>
+                <article class="fxlab-card">
+                    <h3>Kart Basligi</h3>
+                    <p>Kisa aciklama</p>
+                    <a class="fxlab-button fxlab-button-small" href="#">Buton</a>
+                </article>
+                <article class="fxlab-card">
+                    <h3>Kart Basligi</h3>
+                    <p>Kisa aciklama</p>
+                    <a class="fxlab-button fxlab-button-small" href="#">Buton</a>
+                </article>
+                <article class="fxlab-card">
+                    <h3>Kart Basligi</h3>
+                    <p>Kisa aciklama</p>
+                    <a class="fxlab-button fxlab-button-small" href="#">Buton</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="fxlab-panel fxlab-grow-section">
+            <div class="fxlab-section-head">
+                <h2>Flex Grow Uygulamasi</h2>
+                <div class="fxlab-chip-row">
+                    <span class="fxlab-chip">flex-grow</span>
+                    <span class="fxlab-chip">1 - 2 - 1</span>
+                    <span class="fxlab-chip">align-items: stretch</span>
+                </div>
+            </div>
+
+            <div class="fxlab-grow-row">
+                <div class="fxlab-grow-card fxlab-grow-one">
+                    <h3>1 Kutu</h3>
+                    <p>flex-grow: 1;</p>
+                    <a class="fxlab-button fxlab-button-small" href="#">Buton</a>
+                </div>
+                <div class="fxlab-grow-card fxlab-grow-two">
+                    <h3>2 Kutu</h3>
+                    <p>flex-grow: 2;</p>
+                    <a class="fxlab-button fxlab-button-small fxlab-button-green" href="#">Buton</a>
+                </div>
+                <div class="fxlab-grow-card fxlab-grow-three">
+                    <h3>3 Kutu</h3>
+                    <p>flex-grow: 1;</p>
+                    <a class="fxlab-button fxlab-button-small fxlab-button-orange" href="#">Buton</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="fxlab-footer">
+            <p>&copy; 2026 - Temel Flexbox Ornegi</p>
+        </footer>
+    </div>
+</body>
+</html>

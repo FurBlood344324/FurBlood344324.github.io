@@ -1,0 +1,399 @@
+:root {
+    --fxlab-bg: #f4f2fb;
+    --fxlab-surface: rgba(255, 255, 255, 0.8);
+    --fxlab-panel: #fbfbfe;
+    --fxlab-border: #d9deec;
+    --fxlab-text: #3f4760;
+    --fxlab-muted: #7e869d;
+    --fxlab-primary: #7b9be6;
+    --fxlab-primary-dark: #5f7fd2;
+    --fxlab-green: #7fc487;
+    --fxlab-orange: #eead74;
+    --fxlab-shadow: 0 12px 30px rgba(96, 110, 149, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(180, 196, 240, 0.35), transparent 30%),
+        linear-gradient(180deg, #f8f7fc 0%, #f1eef9 100%);
+    color: var(--fxlab-text);
+}
+
+.fxlab-page {
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    overflow: hidden;
+}
+
+.fxlab-navbar,
+.fxlab-hero,
+.fxlab-cards-grid,
+.fxlab-grow-row,
+.fxlab-section-head,
+.fxlab-chip-row,
+.fxlab-nav-links {
+    display: flex;
+}
+
+.fxlab-panel,
+.fxlab-navbar,
+.fxlab-footer {
+    background: var(--fxlab-surface);
+    border: 1px solid var(--fxlab-border);
+    border-radius: 18px;
+    box-shadow: var(--fxlab-shadow);
+    backdrop-filter: blur(10px);
+}
+
+.fxlab-navbar {
+    height: 10vh;
+    min-height: 78px;
+    padding: 0 1.25rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fxlab-logo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.fxlab-nav-links {
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.fxlab-nav-links a,
+.fxlab-button {
+    text-decoration: none;
+}
+
+.fxlab-nav-links a {
+    color: var(--fxlab-muted);
+    font-size: 0.95rem;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.fxlab-nav-links a:hover,
+.fxlab-nav-links a:focus-visible {
+    background: #eef2ff;
+    color: var(--fxlab-text);
+}
+
+.fxlab-hero {
+    height: 30vh;
+    min-height: 230px;
+    gap: 0.9rem;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.fxlab-hero-copy,
+.fxlab-hero-visual,
+.fxlab-cards-section,
+.fxlab-grow-section {
+    padding: 1rem;
+}
+
+.fxlab-hero-copy,
+.fxlab-hero-visual {
+    flex: 1;
+}
+
+.fxlab-hero-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fxlab-hero-copy h1,
+.fxlab-section-head h2,
+.fxlab-card h3,
+.fxlab-grow-card h3 {
+    margin: 0;
+}
+
+.fxlab-hero-copy h1 {
+    font-size: clamp(1.6rem, 2vw, 2.1rem);
+    margin-top: 0.75rem;
+    margin-bottom: 0.6rem;
+}
+
+.fxlab-hero-copy p,
+.fxlab-card p,
+.fxlab-grow-card p,
+.fxlab-footer p {
+    margin: 0;
+    color: var(--fxlab-muted);
+}
+
+.fxlab-lines {
+    margin-top: 0.8rem;
+}
+
+.fxlab-lines span {
+    display: block;
+    height: 0.42rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #d8dcef 0%, #eef1f8 100%);
+}
+
+.fxlab-lines span + span {
+    margin-top: 0.5rem;
+    width: 72%;
+}
+
+.fxlab-lines span:first-child {
+    width: 88%;
+}
+
+.fxlab-button {
+    align-self: flex-start;
+    padding: 0.7rem 1.35rem;
+    border-radius: 0.7rem;
+    background: linear-gradient(180deg, #89a7ec 0%, #7091e2 100%);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.fxlab-button-small {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.88rem;
+}
+
+.fxlab-button-green {
+    background: linear-gradient(180deg, #8bca90 0%, #76b87c 100%);
+}
+
+.fxlab-button-orange {
+    background: linear-gradient(180deg, #f2ba86 0%, #ea9e62 100%);
+}
+
+.fxlab-hero-visual {
+    display: flex;
+}
+
+.fxlab-visual-box {
+    flex: 1;
+    position: relative;
+    border-radius: 16px;
+    border: 1px solid #dee3f1;
+    background: linear-gradient(180deg, #f4f6fc 0%, #eceff8 100%);
+    overflow: hidden;
+}
+
+.fxlab-mountain {
+    position: absolute;
+    bottom: 1.25rem;
+    background: linear-gradient(180deg, #d5d9e8 0%, #c6cada 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.fxlab-mountain-left {
+    left: 22%;
+    width: 82px;
+    height: 62px;
+}
+
+.fxlab-mountain-right {
+    left: 38%;
+    width: 98px;
+    height: 78px;
+}
+
+.fxlab-sun {
+    position: absolute;
+    top: 22%;
+    right: 24%;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #d8d9e7;
+}
+
+.fxlab-cards-section {
+    height: 30vh;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.fxlab-section-head {
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.fxlab-section-head h2 {
+    font-size: 1.45rem;
+}
+
+.fxlab-chip-row {
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.fxlab-chip {
+    padding: 0.38rem 0.78rem;
+    border: 1px solid #e0e4f1;
+    border-radius: 999px;
+    background: #f5f6fb;
+    color: #8e94a8;
+    font-size: 0.76rem;
+    white-space: nowrap;
+}
+
+.fxlab-cards-grid {
+    flex: 1;
+    min-height: 0;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.fxlab-card {
+    min-width: 0;
+    flex: 1 1 calc(33.333% - 0.5rem);
+    padding: 1rem;
+    border: 1px solid #dde2ef;
+    border-radius: 16px;
+    background: var(--fxlab-panel);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.6rem;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.fxlab-card h3,
+.fxlab-grow-card h3 {
+    font-size: 1.05rem;
+}
+
+.fxlab-grow-section {
+    height: 20vh;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.fxlab-grow-row {
+    flex: 1;
+    min-height: 0;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+
+.fxlab-grow-card {
+    min-width: 0;
+    padding: 1rem;
+    border-radius: 16px;
+    border: 1px solid #d9e1ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fxlab-grow-one {
+    flex-grow: 1;
+    background: linear-gradient(180deg, #edf5ff 0%, #e0ecfb 100%);
+}
+
+.fxlab-grow-two {
+    flex-grow: 2;
+    background: linear-gradient(180deg, #edf8e9 0%, #dfefd8 100%);
+}
+
+.fxlab-grow-three {
+    flex-grow: 1;
+    background: linear-gradient(180deg, #fff1e5 0%, #f9e4d4 100%);
+}
+
+.fxlab-footer {
+    height: 10vh;
+    min-height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+@media (max-width: 900px) {
+    .fxlab-page {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    .fxlab-hero,
+    .fxlab-cards-section,
+    .fxlab-grow-section {
+        height: auto;
+    }
+
+    .fxlab-hero {
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .fxlab-card {
+        flex-basis: calc(50% - 0.4rem);
+    }
+
+    .fxlab-grow-row {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 640px) {
+    .fxlab-page {
+        padding: 0.75rem;
+    }
+
+    .fxlab-navbar,
+    .fxlab-section-head,
+    .fxlab-grow-row {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .fxlab-navbar {
+        height: auto;
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+
+    .fxlab-nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fxlab-section-head {
+        align-items: flex-start;
+    }
+
+    .fxlab-card,
+    .fxlab-grow-card {
+        flex-basis: 100%;
+    }
+}
