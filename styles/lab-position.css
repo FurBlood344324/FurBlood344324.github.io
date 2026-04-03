@@ -130,7 +130,7 @@ button {
     position: relative;
     width: min(100%, 680px);
     min-height: 560px;
-    padding: 5.75rem 2.1rem 2.2rem;
+    padding: 5.75rem 2.1rem 2.4rem;
     border-radius: 2rem;
     background: linear-gradient(135deg, var(--lab-card-start) 0%, var(--lab-card-end) 100%);
     box-shadow: var(--lab-shadow);
@@ -151,10 +151,10 @@ button {
 
 .card-orb {
     position: absolute;
-    top: 42%;
-    right: 2.8rem;
-    width: 112px;
-    height: 220px;
+    top: 45%;
+    right: 3rem;
+    width: 126px;
+    height: 238px;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.3);
     z-index: 1;
@@ -182,8 +182,9 @@ button {
 }
 
 .chip-location {
-    top: 58%;
-    right: 4.2rem;
+    top: auto;
+    right: 4.5rem;
+    bottom: 9.6rem;
     background: var(--lab-white);
     z-index: 3;
 }
@@ -197,7 +198,7 @@ button {
 .card-content {
     position: relative;
     z-index: 2;
-    width: min(66%, 390px);
+    width: min(58%, 340px);
 }
 
 .card-eyebrow {
@@ -210,14 +211,15 @@ button {
 
 .card-content h2 {
     margin: 0 0 1.2rem;
-    font-size: clamp(2rem, 4vw, 3.1rem);
-    line-height: 1.05;
+    font-size: clamp(2rem, 3.7vw, 3rem);
+    line-height: 1.02;
+    text-wrap: balance;
 }
 
 .card-content p {
     margin: 0 0 1rem;
-    font-size: 1.08rem;
-    line-height: 1.85;
+    font-size: 1.03rem;
+    line-height: 1.8;
     color: #373346;
 }
 
@@ -230,7 +232,8 @@ button {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    margin-top: 1.8rem;
+    margin-top: 1.6rem;
+    max-width: 320px;
 }
 
 .card-action,
@@ -304,13 +307,12 @@ button {
     }
 
     .chip-location {
-        top: auto;
-        right: 1.35rem;
-        bottom: 7rem;
+        right: 1.6rem;
+        bottom: 8rem;
     }
 
     .card-content {
-        width: min(100%, 430px);
+        width: min(100%, 380px);
     }
 }
 
@@ -325,13 +327,13 @@ button {
 
     .announcement-card {
         min-height: auto;
-        padding: 6.2rem 1.2rem 8.5rem;
+        padding: 6.2rem 1.2rem 9.4rem;
     }
 
     .card-orb {
         top: auto;
         right: 1.2rem;
-        bottom: 5.1rem;
+        bottom: 5.4rem;
         width: 92px;
         height: 170px;
     }
@@ -351,7 +353,7 @@ button {
 
     .chip-location {
         right: 1.2rem;
-        bottom: 6rem;
+        bottom: 6.4rem;
         max-width: calc(100% - 2.4rem);
     }
 
@@ -362,6 +364,10 @@ button {
 
     .card-content h2 {
         font-size: 2.3rem;
+    }
+
+    .card-actions {
+        max-width: none;
     }
 
     .card-content p {
