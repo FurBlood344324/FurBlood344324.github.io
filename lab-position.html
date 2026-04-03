@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Lab - Teknoloji Toplulugu Etkinligi</title>
+    <link rel="stylesheet" href="styles/lab-position.css">
+</head>
+<body>
+    <a class="lab-back-button" href="index.html">Ana Sayfaya Don</a>
+
+    <a class="lab-fixed-help" href="#yardim">Yardimci Menu</a>
+
+    <main class="lab-shell">
+        <header class="lab-header">
+            <p class="lab-kicker">Web Lab - Hafta 5</p>
+            <h1>CSS Position ile Etkilesimli Duyuru Karti</h1>
+            <p>Ornek gorseldeki kompozisyonu referans alarak tek bir kart uzerinde relative, absolute, fixed, z-index, hover ve animasyon yapilarini birlikte kullanan bir etkinlik duyurusu hazirlandi.</p>
+        </header>
+
+        <section class="lab-card-section" aria-labelledby="duyuru-baslik">
+            <article class="announcement-card">
+                <span class="info-chip chip-free">Ucretsiz</span>
+                <span class="info-chip chip-date">24 Nisan</span>
+                <span class="info-chip chip-location">Konum: Konferans Salonu</span>
+                <span class="info-chip chip-deadline">Son Kayit</span>
+                <div class="card-glow" aria-hidden="true"></div>
+                <div class="card-orb" aria-hidden="true"></div>
+
+                <div class="card-content">
+                    <p class="card-eyebrow">Kampus duyurusu</p>
+                    <h2 id="duyuru-baslik">Teknoloji Toplulugu Etkinligi</h2>
+                    <p>Bu oturumda web arayuzlerinde konumlandirma mantigi, arayuz hiyerarsisi ve etkilesimli kart tasarimi uzerine kisa ama yogun bir uygulama yapilacak.</p>
+                    <p>Katilimcilar etkinlik sonunda ayni tasarim icinde <code>relative</code>, <code>absolute</code>, <code>fixed</code> ve <code>z-index</code> iliskisini calisan bir ornekle gorecek.</p>
+
+                    <div class="card-actions" id="yardim">
+                        <a href="#footer-note" class="card-action primary-action">Programi Incele</a>
+                        <a href="index.html" class="card-action secondary-action">Portfolyoya Don</a>
+                        <button type="button" class="card-action ghost-action">Kayit Hatirlaticisi</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <footer class="lab-footer" id="footer-note">
+            <p>2026 - LAB Position Ornek Calismasi</p>
+        </footer>
+    </main>
+</body>
+</html>

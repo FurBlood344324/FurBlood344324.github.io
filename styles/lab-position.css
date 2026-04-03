@@ -1,0 +1,376 @@
+:root {
+    --lab-bg: #f4f2ef;
+    --lab-surface: rgba(248, 248, 251, 0.94);
+    --lab-card-start: rgba(221, 231, 255, 0.96);
+    --lab-card-end: rgba(232, 210, 255, 0.92);
+    --lab-primary: #2f67e8;
+    --lab-primary-dark: #214dba;
+    --lab-text: #242230;
+    --lab-muted: #5b576c;
+    --lab-white: #ffffff;
+    --lab-yellow: #ffeaa0;
+    --lab-green: #d9ffd8;
+    --lab-pink: #ffe1f1;
+    --lab-shadow: 0 24px 50px rgba(116, 118, 155, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    color: var(--lab-text);
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 28%),
+        linear-gradient(180deg, #fbfaf8 0%, var(--lab-bg) 100%);
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+.lab-back-button,
+.lab-fixed-help,
+.card-action {
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.lab-back-button {
+    position: absolute;
+    top: 3.25rem;
+    left: 4.25rem;
+    z-index: 4;
+    padding: 0.95rem 1.2rem;
+    border-radius: 0.85rem;
+    background: linear-gradient(180deg, var(--lab-primary) 0%, var(--lab-primary-dark) 100%);
+    color: var(--lab-white);
+    font-weight: 700;
+    box-shadow: 0 16px 30px rgba(47, 103, 232, 0.22);
+}
+
+.lab-back-button:hover,
+.lab-back-button:focus-visible {
+    transform: translateY(-3px);
+}
+
+.lab-back-button:active {
+    transform: translateY(0);
+}
+
+.lab-fixed-help {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 5;
+    padding: 1rem 1.3rem;
+    border-radius: 1.1rem;
+    background: linear-gradient(135deg, #0f8db0 0%, #1457c4 100%);
+    color: var(--lab-white);
+    font-weight: 700;
+    box-shadow: 0 18px 32px rgba(20, 87, 196, 0.26);
+    animation: float-help 2.6s ease-in-out infinite;
+}
+
+.lab-fixed-help:hover,
+.lab-fixed-help:focus-visible {
+    transform: translateY(-4px) scale(1.02);
+}
+
+.lab-shell {
+    min-height: 100vh;
+    padding: 6rem 1.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lab-header {
+    width: min(860px, 100%);
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.lab-kicker {
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.78rem;
+    color: var(--lab-primary-dark);
+}
+
+.lab-header h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.lab-header p {
+    width: min(720px, 100%);
+    margin: 0 auto;
+    color: var(--lab-muted);
+    line-height: 1.7;
+}
+
+.lab-card-section {
+    width: min(980px, 100%);
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 2rem;
+}
+
+.announcement-card {
+    position: relative;
+    width: min(100%, 680px);
+    min-height: 560px;
+    padding: 5.75rem 2.1rem 2.2rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, var(--lab-card-start) 0%, var(--lab-card-end) 100%);
+    box-shadow: var(--lab-shadow);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.card-glow {
+    position: absolute;
+    inset: auto auto 2.1rem 1.8rem;
+    width: 240px;
+    height: 120px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.32);
+    filter: blur(38px);
+    z-index: 0;
+}
+
+.card-orb {
+    position: absolute;
+    top: 42%;
+    right: 2.8rem;
+    width: 112px;
+    height: 220px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
+.info-chip {
+    position: absolute;
+    z-index: 3;
+    padding: 0.95rem 1rem;
+    border-radius: 0.95rem;
+    font-weight: 700;
+    box-shadow: 0 14px 24px rgba(84, 87, 118, 0.12);
+}
+
+.chip-free {
+    top: 1.8rem;
+    left: 1.35rem;
+    background: var(--lab-yellow);
+}
+
+.chip-date {
+    top: 1.8rem;
+    right: 1.35rem;
+    background: var(--lab-green);
+}
+
+.chip-location {
+    top: 58%;
+    right: 4.2rem;
+    background: var(--lab-white);
+    z-index: 3;
+}
+
+.chip-deadline {
+    right: 1.35rem;
+    bottom: 1.8rem;
+    background: var(--lab-pink);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    width: min(66%, 390px);
+}
+
+.card-eyebrow {
+    margin: 0 0 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #5f63a8;
+}
+
+.card-content h2 {
+    margin: 0 0 1.2rem;
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    line-height: 1.05;
+}
+
+.card-content p {
+    margin: 0 0 1rem;
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: #373346;
+}
+
+.card-content code {
+    font-family: "Courier New", monospace;
+    font-size: 0.95em;
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.8rem;
+}
+
+.card-action,
+.ghost-action {
+    border: 0;
+    padding: 0.95rem 1.15rem;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 700;
+}
+
+.primary-action {
+    background: var(--lab-primary);
+    color: var(--lab-white);
+    box-shadow: 0 14px 24px rgba(47, 103, 232, 0.22);
+}
+
+.secondary-action {
+    background: rgba(255, 255, 255, 0.78);
+    color: var(--lab-text);
+}
+
+.ghost-action {
+    background: transparent;
+    color: var(--lab-primary-dark);
+    outline: 2px solid rgba(47, 103, 232, 0.18);
+}
+
+.card-action:hover,
+.card-action:focus-visible,
+.ghost-action:hover,
+.ghost-action:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(62, 63, 95, 0.14);
+}
+
+.lab-footer {
+    padding: 1.2rem 1rem 0;
+    text-align: center;
+    color: var(--lab-muted);
+}
+
+.lab-footer p {
+    margin: 0;
+}
+
+@keyframes float-help {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@media (max-width: 900px) {
+    .lab-back-button {
+        top: 1.25rem;
+        left: 1.25rem;
+    }
+
+    .lab-shell {
+        padding-top: 6.5rem;
+    }
+
+    .announcement-card {
+        min-height: 620px;
+        padding-top: 6.3rem;
+    }
+
+    .chip-location {
+        top: auto;
+        right: 1.35rem;
+        bottom: 7rem;
+    }
+
+    .card-content {
+        width: min(100%, 430px);
+    }
+}
+
+@media (max-width: 640px) {
+    .lab-shell {
+        padding-inline: 1rem;
+    }
+
+    .lab-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .announcement-card {
+        min-height: auto;
+        padding: 6.2rem 1.2rem 8.5rem;
+    }
+
+    .card-orb {
+        top: auto;
+        right: 1.2rem;
+        bottom: 5.1rem;
+        width: 92px;
+        height: 170px;
+    }
+
+    .chip-free,
+    .chip-date {
+        top: 1.1rem;
+    }
+
+    .chip-free,
+    .chip-date,
+    .chip-location,
+    .chip-deadline {
+        padding: 0.8rem 0.85rem;
+        font-size: 0.92rem;
+    }
+
+    .chip-location {
+        right: 1.2rem;
+        bottom: 6rem;
+        max-width: calc(100% - 2.4rem);
+    }
+
+    .chip-deadline {
+        right: 1.2rem;
+        bottom: 1.2rem;
+    }
+
+    .card-content h2 {
+        font-size: 2.3rem;
+    }
+
+    .card-content p {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .lab-fixed-help {
+        right: 1rem;
+        bottom: 1rem;
+    }
+}
