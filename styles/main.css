@@ -201,19 +201,40 @@ footer p {
     padding: 0;
 }
 
+.embedded-lab-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.embedded-lab-card {
+    padding: 1.2rem;
+    border: 1px solid #1f2b45;
+    border-radius: 18px;
+    background: rgba(26, 26, 46, 0.75);
+}
+
+.embedded-lab-card p {
+    margin-bottom: 1rem;
+}
+
 .embedded-lab-frame {
     display: block;
     width: 100%;
-    height: clamp(920px, 112vh, 1080px);
+    height: 760px;
     border: 1px solid #1f2b45;
     border-radius: 18px;
-    background: transparent;
+    background: #fff;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
 @media (max-width: 900px) {
+    .embedded-lab-grid {
+        grid-template-columns: 1fr;
+    }
+
     .embedded-lab-frame {
-        height: 1220px;
+        height: 700px;
     }
 }
 
@@ -242,8 +263,12 @@ footer p {
         margin-bottom: 1.5rem;
     }
 
+    .embedded-lab-card {
+        padding: 1rem;
+    }
+
     .embedded-lab-frame {
-        height: 1540px;
+        height: 760px;
     }
 
     h2 {

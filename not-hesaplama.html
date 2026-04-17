@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odev 6 - Not Hesaplama</title>
+    <link rel="stylesheet" href="styles/not-hesaplama.css">
+</head>
+<body>
+    <main class="grade-app">
+        <section class="grade-card" aria-labelledby="grade-title">
+            <p class="eyebrow">Uygulama 1</p>
+            <h1 id="grade-title">Ogrenci Not Hesaplama</h1>
+            <p class="intro">Ad soyad, vize ve final bilgilerini girin. Ortalama otomatik olarak hesaplanir, harf notu ve gecme durumu listelenir.</p>
+
+            <form id="grade-form" class="grade-form" novalidate>
+                <label>
+                    <span>Ad Soyad</span>
+                    <input id="student-name" name="student-name" type="text" placeholder="Ornek: Filiz Akin" required>
+                </label>
+
+                <div class="grade-grid">
+                    <label>
+                        <span>Vize Notu</span>
+                        <input id="midterm-score" name="midterm-score" type="text" inputmode="decimal" placeholder="0 - 100" required>
+                    </label>
+
+                    <label>
+                        <span>Final Notu</span>
+                        <input id="final-score" name="final-score" type="text" inputmode="decimal" placeholder="0 - 100" required>
+                    </label>
+                </div>
+
+                <button type="submit">Sonucu Hesapla</button>
+                <p id="grade-error" class="error-message" aria-live="polite"></p>
+            </form>
+
+            <section id="grade-result" class="result-card" aria-live="polite" hidden>
+                <h2>Sonuc</h2>
+                <p><strong>Ogrenci:</strong> <span data-field="name">-</span></p>
+                <p><strong>Ortalama:</strong> <span data-field="average">-</span></p>
+                <p><strong>Harf Notu:</strong> <span data-field="letter">-</span></p>
+                <p><strong>Durum:</strong> <span data-field="status">-</span></p>
+            </section>
+        </section>
+    </main>
+
+    <script src="scripts/not-hesaplama.js"></script>
+</body>
+</html>

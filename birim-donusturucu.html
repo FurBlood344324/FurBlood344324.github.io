@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odev 6 - Birim Donusturucu</title>
+    <link rel="stylesheet" href="styles/birim-donusturucu.css">
+</head>
+<body>
+    <main class="converter-app">
+        <section class="converter-card" aria-labelledby="converter-title">
+            <p class="eyebrow">Uygulama 2</p>
+            <h1 id="converter-title">Birim Donusturucu</h1>
+            <p class="intro">Sicaklik, uzunluk ve kutle donusumleri arasindan secim yaparak degeri aninda donusturun.</p>
+
+            <form id="converter-form" class="converter-form" novalidate>
+                <label>
+                    <span>Deger Giriniz</span>
+                    <input id="conversion-value" type="text" inputmode="decimal" placeholder="Ornek: 50" required>
+                </label>
+
+                <label>
+                    <span>Donusum Tipi</span>
+                    <select id="conversion-type" required>
+                        <option value="c-to-f">Celsius -> Fahrenheit</option>
+                        <option value="f-to-c">Fahrenheit -> Celsius</option>
+                        <option value="m-to-km">Metre -> Kilometre</option>
+                        <option value="km-to-m">Kilometre -> Metre</option>
+                        <option value="kg-to-g">Kilogram -> Gram</option>
+                        <option value="g-to-kg">Gram -> Kilogram</option>
+                    </select>
+                </label>
+
+                <button type="submit">Donustur</button>
+                <p id="converter-error" class="error-message" aria-live="polite"></p>
+            </form>
+
+            <section id="converter-result" class="result-card" aria-live="polite">
+                <p class="result-label">Sonuc</p>
+                <p class="result-value"><span id="converted-value">-</span></p>
+                <p id="conversion-summary" class="result-summary">Bir donusum secip hesaplayin.</p>
+            </section>
+        </section>
+    </main>
+
+    <script src="scripts/birim-donusturucu.js"></script>
+</body>
+</html>
