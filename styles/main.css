@@ -194,7 +194,6 @@ footer p {
     margin-bottom: 0;
 }
 
-/* Eklenen alan: bagimsiz iframe kapsayicisi */
 .embedded-lab-section {
     width: 100%;
     margin: 0 0 2.5rem;
@@ -269,5 +268,153 @@ footer p {
 
     h2 {
         font-size: 1.3rem;
+    }
+}
+
+.lab-portal-section {
+    background-color: #f5f8fc;
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.lab-portal-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 3rem 2rem;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+}
+
+.lab-portal-badge {
+    display: inline-block;
+    background-color: #e6efff;
+    color: #2b6cb0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+h2.lab-portal-title {
+    color: #1a202c;
+    font-size: 2rem;
+    border: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.lab-portal-desc {
+    color: #718096;
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.lab-portal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.lab-btn-primary {
+    background-color: #3182ce;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.lab-btn-primary:hover {
+    background-color: #2b6cb0;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.lab-btn-secondary {
+    background-color: #edf2f7;
+    color: #4a5568;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.lab-btn-secondary:hover {
+    background-color: #e2e8f0;
+    color: #2d3748;
+    text-decoration: none;
+}
+
+.lab-portal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+.lab-week-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lab-week-card strong {
+    color: #2d3748;
+    font-size: 0.95rem;
+}
+
+.lab-week-card span {
+    color: #718096;
+    font-size: 0.8rem;
+    line-height: 1.3;
+}
+
+.lab-week-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+}
+
+.lab-week-card.active {
+    border: 1px solid #cbd5e0;
+    box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
+}
+
+.lab-week-card.disabled {
+    opacity: 0.6;
+    background-color: #f7fafc;
+}
+
+@media (max-width: 600px) {
+    .lab-portal-section {
+        padding: 1.5rem;
+    }
+
+    .lab-portal-card {
+        padding: 2rem 1rem;
+    }
+
+    .lab-portal-actions {
+        flex-direction: column;
+    }
+
+    h2.lab-portal-title {
+        font-size: 1.5rem;
     }
 }

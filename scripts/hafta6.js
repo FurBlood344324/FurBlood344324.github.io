@@ -32,19 +32,19 @@ gradeForm.addEventListener("submit", function (event) {
     const finalScore = parseScore(document.getElementById("final-score").value);
 
     if (!name) {
-        gradeError.textContent = "Lutfen ogrenci adini girin.";
+        gradeError.textContent = "Lütfen öğrenci adını girin.";
         gradeResult.hidden = true;
         return;
     }
 
     if (Number.isNaN(midterm) || Number.isNaN(finalScore)) {
-        gradeError.textContent = "Vize ve final alanlarina gecerli sayisal deger girin.";
+        gradeError.textContent = "Vize ve final alanlarına geçerli sayısal değer girin.";
         gradeResult.hidden = true;
         return;
     }
 
     if (midterm < 0 || midterm > 100 || finalScore < 0 || finalScore > 100) {
-        gradeError.textContent = "Notlar 0 ile 100 arasinda olmalidir.";
+        gradeError.textContent = "Notlar 0 ile 100 arasında olmalıdır.";
         gradeResult.hidden = true;
         return;
     }
@@ -60,5 +60,5 @@ gradeForm.addEventListener("submit", function (event) {
     resultFields.name.textContent = name;
     resultFields.average.textContent = average.toFixed(2);
     resultFields.letter.textContent = calculateLetterGrade(average);
-    resultFields.status.textContent = isPassed ? "Gecti" : "Kaldi";
+    resultFields.status.textContent = isPassed ? "Geçti" : "Kaldı";
 });

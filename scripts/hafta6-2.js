@@ -24,9 +24,9 @@ converterForm.addEventListener("submit", function (event) {
     const numericValue = parseConversionValue(rawValue);
 
     if (Number.isNaN(numericValue)) {
-        converterError.textContent = "Lutfen gecerli bir sayi girin.";
+        converterError.textContent = "Lütfen geçerli bir sayı girin.";
         convertedValue.textContent = "-";
-        conversionSummary.textContent = "Bir donusum secip hesaplayin.";
+        conversionSummary.textContent = "Bir dönüşüm seçip hesaplayın.";
         return;
     }
 
@@ -35,5 +35,5 @@ converterForm.addEventListener("submit", function (event) {
 
     converterError.textContent = "";
     convertedValue.textContent = result.value.toFixed(2) + " " + result.unit;
-    conversionSummary.textContent = numericValue + " degeri icin " + selectedLabel + " donusumu uygulandi.";
+    conversionSummary.textContent = numericValue + " değeri için " + selectedLabel + " dönüşümü uygulandı.";
 });

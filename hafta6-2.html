@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odev 6 - Birim Donusturucu</title>
-    <link rel="stylesheet" href="styles/birim-donusturucu.css">
+    <title>Odev 6 - Birim Dönüştürücü</title>
+    <link rel="stylesheet" href="styles/hafta6-2.css">
 </head>
 <body>
     <main class="converter-app">
         <section class="converter-card" aria-labelledby="converter-title">
-            <p class="eyebrow">Uygulama 2</p>
-            <h1 id="converter-title">Birim Donusturucu</h1>
-            <p class="intro">Sicaklik, uzunluk ve kutle donusumleri arasindan secim yaparak degeri aninda donusturun.</p>
+            <p class="eyebrow">Uygulama 2 - <a href="hafta6.html" style="color: inherit; text-decoration: underline;">Uygulama 1'e Dön (Not Hesaplama)</a></p>
+            <h1 id="converter-title">Birim Dönüştürücü</h1>
+            <p class="intro">Sıcaklık, uzunluk ve kütle dönüşümleri arasından seçim yaparak değeri anında dönüştürün.</p>
 
             <form id="converter-form" class="converter-form" novalidate>
                 <label>
@@ -20,7 +20,7 @@
                 </label>
 
                 <label>
-                    <span>Donusum Tipi</span>
+                    <span>Dönüşüm Tipi</span>
                     <select id="conversion-type" required>
                         <option value="c-to-f">Celsius -> Fahrenheit</option>
                         <option value="f-to-c">Fahrenheit -> Celsius</option>
@@ -38,11 +38,11 @@
             <section id="converter-result" class="result-card" aria-live="polite">
                 <p class="result-label">Sonuc</p>
                 <p class="result-value"><span id="converted-value">-</span></p>
-                <p id="conversion-summary" class="result-summary">Bir donusum secip hesaplayin.</p>
+                <p id="conversion-summary" class="result-summary">Bir dönüşüm seçip hesaplayın.</p>
             </section>
         </section>
     </main>
 
-    <script src="scripts/birim-donusturucu.js"></script>
+    <script src="scripts/hafta6-2.js"></script>
 </body>
 </html>

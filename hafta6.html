@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odev 6 - Not Hesaplama</title>
-    <link rel="stylesheet" href="styles/not-hesaplama.css">
+    <link rel="stylesheet" href="styles/hafta6.css">
 </head>
 <body>
     <main class="grade-app">
         <section class="grade-card" aria-labelledby="grade-title">
-            <p class="eyebrow">Uygulama 1</p>
-            <h1 id="grade-title">Ogrenci Not Hesaplama</h1>
-            <p class="intro">Ad soyad, vize ve final bilgilerini girin. Ortalama otomatik olarak hesaplanir, harf notu ve gecme durumu listelenir.</p>
+            <p class="eyebrow">Uygulama 1 - <a href="hafta6-2.html" style="color: inherit; text-decoration: underline;">Uygulama 2'ye Git (Birim Dönüştürücü)</a></p>
+            <h1 id="grade-title">Öğrenci Not Hesaplama</h1>
+            <p class="intro">Ad soyad, vize ve final bilgilerini girin. Ortalama otomatik olarak hesaplanır, harf notu ve geçme durumu listelenir.</p>
 
             <form id="grade-form" class="grade-form" novalidate>
                 <label>
@@ -37,7 +37,7 @@
 
             <section id="grade-result" class="result-card" aria-live="polite" hidden>
                 <h2>Sonuc</h2>
-                <p><strong>Ogrenci:</strong> <span data-field="name">-</span></p>
+                <p><strong>Öğrenci:</strong> <span data-field="name">-</span></p>
                 <p><strong>Ortalama:</strong> <span data-field="average">-</span></p>
                 <p><strong>Harf Notu:</strong> <span data-field="letter">-</span></p>
                 <p><strong>Durum:</strong> <span data-field="status">-</span></p>
@@ -45,6 +45,6 @@
         </section>
     </main>
 
-    <script src="scripts/not-hesaplama.js"></script>
+    <script src="scripts/hafta6.js"></script>
 </body>
 </html>

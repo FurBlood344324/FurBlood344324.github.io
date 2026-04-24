@@ -1,4 +1,4 @@
-/* ===== GENEL SIFIRLAMA ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* ===== SAYFA KAPSAYICI ===== */
-.sayfa-kapsayici {
+.page-container {
     width: 700px;
     margin: 30px auto;
     background-color: #fff;
@@ -21,7 +20,6 @@ body {
     padding: 0;
 }
 
-/* ===== HEADER ===== */
 header {
     padding: 14px 20px;
     border-bottom: 1px solid #ccc;
@@ -37,14 +35,12 @@ header h1 {
     margin-right: 20px;
 }
 
-/* Hiyerarşik Seçici 1: nav ul */
 nav ul {
     display: inline-block;
     list-style: none;
     vertical-align: middle;
 }
 
-/* Hiyerarşik Seçici 2: nav ul li a */
 nav ul li {
     display: inline-block;
 }
@@ -60,85 +56,75 @@ nav ul li a {
     transition: background-color 0.2s, color 0.2s;
 }
 
-/* Hover efekti */
 nav ul li a:hover {
     background-color: #e8e0f0;
     color: #555;
     border-color: #ccc;
 }
 
-/* ===== AÇIKLAMA ALANI ===== */
-.aciklama {
+.description {
     padding: 14px 20px;
     border-bottom: 1px solid #ccc;
 }
 
-.aciklama p {
+.description p {
     font-size: 0.85rem;
     color: #444;
     line-height: 1.55;
     text-align: left;
 }
 
-/* ===== MAIN - YAN YANA KUTULAR ===== */
 main {
     padding: 16px 20px;
 }
 
-/* Grup Seçici: section ve aside ortak stiller */
-.icerik-kutusu,
-.yan-kutu {
+.content-box,
+.side-box {
     display: inline-block;
     vertical-align: top;
     padding: 14px;
     min-height: 200px;
 }
 
-/* İçerik Kutusu (sol) */
-.icerik-kutusu {
+.content-box {
     width: 48%;
     background-color: #fff5f5;
     border-left: 3px solid #cc4444;
     margin-right: 2%;
 }
 
-/* Yan Kutu (sağ) */
-.yan-kutu {
+.side-box {
     width: 48%;
     background-color: #f0f7ff;
     border-left: 3px solid #4488cc;
 }
 
-/* Hiyerarşik Seçici 3: kutu içindeki h2 */
-.icerik-kutusu h2,
-.yan-kutu h2 {
+.content-box h2,
+.side-box h2 {
     font-size: 1rem;
     margin-bottom: 10px;
     color: #222;
 }
 
-/* Hiyerarşik Seçici 4: kutu içindeki p etiketleri */
-.icerik-kutusu p {
+.content-box p {
     font-size: 0.82rem;
     color: #555;
     line-height: 1.6;
     text-align: left;
 }
 
-.yan-kutu p {
+.side-box p {
     font-size: 0.82rem;
     color: #444;
     line-height: 1.6;
     text-align: left;
 }
 
-/* Grup Seçici 2: tüm kutulardaki paragraflar */
-.icerik-kutusu p,
-.yan-kutu p {
+.content-box p,
+.side-box p {
     margin-bottom: 8px;
 }
 
-/* ===== FOOTER ===== */
 footer {
     border-top: 1px solid #ccc;
     padding: 12px 20px;
